@@ -13,7 +13,8 @@ const user = {
 //console.log(this);
 
 function chai(){
-    console.log(this);
+    let username = "hitesh"
+    console.log(this.username);
     
 }
 chai()
