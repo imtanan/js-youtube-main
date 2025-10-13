@@ -20,26 +20,33 @@ let checkBalance = function () {
 };
 //Menu function
 let showMenu = function () {
-  let count = Number(
-    prompt(
-      "Please Press 1 for deposit, press 2 to withdraw money, and press 3 to check your current Balance"
-    )
-  );
-  switch (count) {
-    case 1:
-      deposit();
-      break;
-    case 2:
-      withdraw();
-      break;
-    case 3:
-      checkBalance();
-      break;
+  studentStatus = true;
+  while (studentStatus) {
+    let count = Number(
+      prompt(
+        "Good Day! Please Press 1 for deposit, press 2 to withdraw money, and press 3 to check your current Balance Otherwise 4 to exit "
+      )
+    );
+    switch (count) {
+      case 1:
+        deposit();
+        break;
+      case 2:
+        withdraw();
+        break;
+      case 3:
+        checkBalance();
+        break;
 
-    default:
-      console.log("Invalid Input please try again!");
-      showMenu();
-      break;
+      case 4:
+        studentStatus = false;
+        break;
+
+      default:
+        console.log("Invalid Input please try again!");
+        showMenu();
+        break;
+    }
   }
 };
 showMenu();
