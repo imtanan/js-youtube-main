@@ -3,6 +3,7 @@ let myarr = [
     {name:"C++",author:"jady"},
     {name:"algoma",author:"CJ"}
 ]
+let borrowerStatus =true;
 while(borrowerStatus){
 let options = function(){
     console.log(`Good day! please select what do you want:`);
@@ -19,7 +20,7 @@ let options = function(){
     }else if(choice==3){
         returnBook();
     }else if(choice==4){
-
+          borrowerStatus = false;
     }
 }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="screen-log"></p> -->
+
+    <p id="log">The ctrl key was pressed while the cursor is moving: false</p>
+  </body>
+
+  <script>
+    /*  let screenLog = document.querySelector("#screen-log");
+      document.addEventListener("mousemove", logkey);
+      function logkey(e) {
+        screenLog.innerText = `
+      Screen X/Y: ${e.screenX}, ${e.screenY}
+      Client X/Y: ${e.clientX}, ${e.clientY}`;
+  }*/
+    let log = document.querySelector("#log");
+    window.addEventListener("mousemove", logkey);
+    function logkey(e) {
+      log.textContent = `The ctrl key was pressed while the cursor is moving: ${e.ctrlKey}`;
+    }
+  </script>
+</html>
