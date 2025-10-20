@@ -65,5 +65,36 @@
         removeIt.remove();
       }
     });
+    document.querySelector("#images").addEventListener('click', (e)=>{
+      console.log(e.target.tagName);
+      if(e.target.tagName === 'IMG'){
+        
+        
+      let removeIt = e.target.parentNode;
+      removeIt.remove()
+      }
+})
   </script>
 </html>
+
+another code snippet
+
+<body>
+    <!-- <p id="screen-log"></p> -->
+
+    <p id="log">The ctrl key was pressed while the cursor is moving: false</p>
+  </body>
+  <script>
+   /*  let screenLog = document.querySelector("#screen-log");
+      document.addEventListener("mousemove", logkey);
+      function logkey(e) {
+        screenLog.innerText = `
+      Screen X/Y: ${e.screenX}, ${e.screenY}
+      Client X/Y: ${e.clientX}, ${e.clientY}`;
+  }*/
+    let log = document.querySelector("#log");
+    window.addEventListener("mousemove", logkey);
+    function logkey(e) {
+      log.textContent = `The ctrl key was pressed while the cursor is moving: ${e.ctrlKey}`;
+    }
+</script>
