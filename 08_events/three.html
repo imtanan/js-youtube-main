@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+    let ginti;
+    document.addEventListener("click", (event) => {
+      if (event.target.id === "start") {
+        if (!ginti) {
+          ginti = setInterval(sayDate, 2000, "hi");
+        }
+      } else if (event.target.id === "stop") {
+        clearInterval(ginti);
+        ginti = null;
+      }
+    });
+  </script>
+</html>
