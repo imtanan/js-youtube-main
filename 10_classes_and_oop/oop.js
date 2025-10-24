@@ -13,10 +13,10 @@ function User(username, loginCount, isLoggedIn) {
   this.username = username;
   this.loginCount = loginCount;
   this.isLoggedIn = isLoggedIn;
-  return this;
+  return this; 
 }
-const userOne = User("imtanan", 8, true);
-const userTwo = User("Kajal", 12, false);
+const userOne = new User("imtanan", 8, true);
+const userTwo = new User("Kajal", 12, false);
 
-console.log(userOne);
-console.log(userTwo);
+console.log(userOne.constructor);
+
